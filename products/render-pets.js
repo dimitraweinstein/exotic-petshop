@@ -15,22 +15,22 @@ export default function renderPets(pet) {
     li.appendChild(img);
 
     const div = document.createElement('div');
-    div.className = 'pet-info';
+    div.classList.add('pet-info');
     div.textContent = pet.habitat;
     li.appendChild(div);
 
     const div2 = document.createElement('div');
-    div2.className = 'pet-info';
+    div2.classList.add('pet-info');
     div2.textContent = pet.threats;
     li.appendChild(div2);
 
     const div3 = document.createElement('div');
-    div3.className = 'pet-info';
+    div3.classList.add('pet-info');
     div3.textContent = pet.note;
     li.appendChild(div3);
 
     const p = document.createElement('p');
-    p.className = 'price';
+    p.classList.add('price');
     const price = '$' + pet.price.toFixed(2);
     p.textContent = price;
     
