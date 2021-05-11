@@ -1,6 +1,6 @@
-export default renderPets;
+export default { renderPets };
 
-function renderPets(pets) {
+export function renderPets(pets) {
     const li = document.createElement('li');
     li.className = pets.category;
     li.title = pets.note;
