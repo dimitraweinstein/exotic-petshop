@@ -1,5 +1,5 @@
 const barnOwl = {
-    id: 'barnOwl',
+    id: 1,
     species: 'Barn Owl',
     image: '/barn-owl-.jpeg',
     note: 'Besides excellent vision, Barn Owls are extraordinarily sensitive to sound; their ability to locate prey by sound alone is the best of any animal ever tested.',
@@ -11,7 +11,7 @@ const barnOwl = {
 };
 
 const barredOwl = {
-    id: 'barredOwl',
+    id: 2,
     species: 'Barred Owl',
     image: '/barred-owl.jpeg',
     note: 'Barred Owls expanded their range dramatically in the 20th century to include western forests, where they now compete with Spotted Owls.',
@@ -23,7 +23,7 @@ const barredOwl = {
 };
 
 const ferruginousPygmy = {
-    id: 'ferruginousPygmy',
+    id: 3,
     species: 'Ferruginous Pygmy',
     image: '/ferruginous-pygmy.jpeg',
     note: 'The Ferruginous Pygmy-Owl is one of the most widespread birds of the Neotropical lowlands; its range includes the southern tip of Texas and the south-central edge of Arizona.',
