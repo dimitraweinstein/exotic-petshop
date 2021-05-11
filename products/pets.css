@@ -1,7 +1,23 @@
 
+
 h2 {
     color: var(--color2);
-    font-size: 50px;
+    font-size: 40px;
+}
+
+div div2 div3 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    padding: 15px;
+    margin: 25px;
+}
+
+.pet-info {
+    line-height: 1.75rem;
+    font-size: small;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #pets {
@@ -14,10 +30,10 @@ h2 {
     list-style: none;
     position: relative;
     background: white;
-    border: 1px solid #aaa;
+    border: 1px solid var(--color5);
     border-radius: 5px;
-    width: 120px;
-    height: 170px;
+    width: 275px;
+    height: 390px;
     margin-right: 5px;
     margin-bottom: 5px;
     text-align: center;
@@ -39,7 +55,11 @@ h2 {
     max-width: 90px;
     max-height: 90px;
     margin-top: 5px;
+    border: 2px solid var(--color2);
+    border-radius: 5px;
 }
+
+
 
 .price {
     font-size: 0.9rem;
@@ -58,8 +78,8 @@ h2 {
     transition: color 200ms ease-in-out;
 }
 .price button:hover {
-    background: #aaa;
-    color: white;
+    background: var(--color5);
+    color: var(--color6);
 }
 
 

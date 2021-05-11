@@ -22,6 +22,18 @@ const barredOwl = {
     cost: 200.00
 };
 
+const ferruginousPygmy = {
+    id: 'ferruginousPygmy',
+    species: 'Ferruginous Pygmy',
+    image: '/ferruginous-pygmy.jpeg',
+    note: 'The Ferruginous Pygmy-Owl is one of the most widespread birds of the Neotropical lowlands; its range includes the southern tip of Texas and the south-central edge of Arizona.',
+    threats: 'Habitat loss, land conversion, and urbanization',
+    habitat: 'Tropical dry forests',
+    category: 'birds-owls',
+    price: 1100.00,
+    cost: 600.00
+};
+
 // const blueberry = {
 //     id: 'blueberry',
 //     name: 'Blueberry',
@@ -75,7 +87,7 @@ const barredOwl = {
 const pets = [
     barnOwl,
     barredOwl,
-
+    ferruginousPygmy,
 ];
 
 export default pets;
