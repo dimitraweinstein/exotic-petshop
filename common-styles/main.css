@@ -1,41 +1,70 @@
-*{
+@import url('https://fonts.googleapis.com/css?family=Heebo|Oswald');
+
+* {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-}
+body {
 
---header-height: 80px;
---shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
---gutter: 30px;
---footer-height: 25px;
+/* CSS HSL */
+    --color1: hsla(47, 95%, 52%, 1);
+    --color2: hsla(19, 94%, 56%, 1);
+    --color3: hsla(354, 81%, 56%, 1);
+    --color4: hsla(271, 54%, 39%, 1);
+    --color5: hsla(187, 58%, 53%, 1);
+    --color6: hsla(52, 94%, 94%, 1);
 
-font-family:
-;
-background-color: ;
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.80);
+    --gutter: 30px;
 
-section {
-    background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+
+    font-family: 'Heebo', sans-serif;
+    background: var(--color6);
+    margin: 0;
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color4);
+    color: var(--color6);
     box-shadow: var(--shadow);
 }
 
+header nav a {
+    color: var(--color6);
+    border: 1px solid var(--color6);
+    padding: 3px 8px;
+    text-decoration: none;
+    transition: color 200ms ease-in;
+}
+
+header nav a:hover {
+    color: var(--color2);
+    border: 1px solid var(--color2);
+}
+
+header, main {
+    padding: 8px;
+}
+
+h1 {
+    font-family: 'Oswald';
+    color: var(--color6);
+}
+
+.hidden {
+    display: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.main-image {
+    height: 100px;
+    margin-top: 40px;
+    width: 350px;
+}
