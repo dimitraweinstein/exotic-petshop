@@ -3,7 +3,7 @@
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('renders an owl', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = true;
