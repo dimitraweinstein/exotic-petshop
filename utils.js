@@ -1,13 +1,10 @@
-import cartItems from './data/cart-data.js';
-// import pets from './data/pets-data.js';
-
-export function findById(pets, id){
+export default function findById(pets, id){
 
     for (let pet of pets) {
-        if (id === cartItems.id) {
-            return cartItems;
+        if (id === pet.id) {
+            return pet;
         }
 
-        return null;
     }
+    return null;
 }
