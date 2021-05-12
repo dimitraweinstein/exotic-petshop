@@ -2,6 +2,7 @@
 // import { example } from '../example.js';
 import { renderCartItem } from '../cart/render-cart-items.js';
 import renderPets from '../products/render-pets.js';
+import findById from '../utils.js';
 
 const test = QUnit.test;
 QUnit.module('Render Pets');
@@ -46,4 +47,37 @@ test('renders a cart item', assert => {
 
     assert.equal(html, expected);
 });
+
+const owl = {
+    id: 1,
+    quantity: 2
+};
+
+const rock = {
+    id: 4,
+    quantity: 6
+};
+
+const myArray = [
+    owl,
+    rock
+];
+
+
+test('finds item by matching id', assert => {
+    //Arrange
+    // Set up your arguments and expectations
+    const idOne = 1;
+    const idTwo = 4;
+    const expected1 = owl;
+    const expected2 = rock;
+
+    const actual1 = findById(myArray, idOne);
+    const actual2 = findById(myArray, idTwo);
+
+    assert.equal(actual1, expected1);
+    assert.equal(actual2, expected2);
+
+});
+
 
