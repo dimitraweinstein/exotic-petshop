@@ -39,6 +39,10 @@ export default function renderPets(pet) {
     button.value = pet.code;
     p.appendChild(button);
 
+    button.addEventListener('click', () => {
+        console.log(pet, 'this button works');
+    });
+
     li.appendChild(p);
 
     return li;
