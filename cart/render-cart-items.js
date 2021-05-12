@@ -15,9 +15,9 @@ export function renderCartItem(cartItems) {
     const quantityTd = document.createElement('td');
     const priceTd = document.createElement('td');
     const totalTd = document.createElement('td');
-console.log(animals.price.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD'}));
+    console.log(animals.price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD' }));
 
     nameTd.textContent = animals.species;
     quantityTd.textContent = cartItems.quantity;
@@ -29,9 +29,9 @@ console.log(animals.price.toLocaleString('en-US', {
     const total = animals.price * cartItems.quantity;
 
     totalTd.textContent = total.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-});
+        style: 'currency',
+        currency: 'USD',
+    });
 
     tr.append(nameTd, quantityTd, priceTd, totalTd);
 
