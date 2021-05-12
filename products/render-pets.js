@@ -41,6 +41,8 @@ export default function renderPets(pet) {
 
     button.addEventListener('click', () => {
         console.log(pet, 'this button works');
+        
+
     });
 
     li.appendChild(p);
