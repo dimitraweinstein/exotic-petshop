@@ -32,8 +32,9 @@ placeOrderButton.textContent = 'Place Order';
 
 placeOrderButton.addEventListener('click', () => {
     console.log('this button works');
+    alert(`You are about to finalize your purchase. Your total is ${total.textContent} Thank you for shopping at Dubs Exotic Pets!`);
     localStorage.removeItem(CART);
-    window.location.replace('../products/index.html');
+    window.location.replace('../index.html');
 });
 
 tableFoot.appendChild(placeOrderButton);
