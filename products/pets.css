@@ -82,4 +82,11 @@ div div2 div3 {
     color: var(--color6);
 }
 
+button {
+    transition: color 200ms ease-in-out;
+}
 
+button:hover {
+    background: var(--color5);
+    color: var(--color6);
+}

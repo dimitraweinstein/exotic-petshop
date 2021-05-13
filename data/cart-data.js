@@ -1,16 +1,16 @@
 const cartItems = [
     {
-        id: 1,
-        quantity: 9
+        id:0, 
+        quantity: 0
 
     },
     {
-        id: 2,
-        quantity:9
+        id: 0,
+        quantity: 0
     },
     {
-        id: 3,
-        quantity:9
+        id: 0,
+        quantity: 0
     }
 ];
 

@@ -1,5 +1,6 @@
 import pets from '../data/pets-data.js';
-import cartStuff from '../data/cart-data.js';
+// import cartStuff from '../data/cart-data.js';
+// import { getCart } from '../local-storage-utils.js';
 import findById from '../utils.js';
 
 
@@ -15,9 +16,9 @@ export function renderCartItem(cartItems) {
     const quantityTd = document.createElement('td');
     const priceTd = document.createElement('td');
     const totalTd = document.createElement('td');
-    console.log(animals.price.toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD' }));
+    // console.log(animals.price.toLocaleString('en-US', {
+    //     style: 'currency',
+    //     currency: 'USD' }));
 
     nameTd.textContent = animals.species;
     quantityTd.textContent = cartItems.quantity;
@@ -38,10 +39,10 @@ export function renderCartItem(cartItems) {
     return tr;
 }
 
-export function getCartTotal() {
+export function getCartTotal(arr) {
     let accumulator = 0;
 
-    for (let item of cartStuff) {
+    for (let item of arr) {
         const pet = findById(pets, item.id);
         const total = item.quantity * pet.price;
 

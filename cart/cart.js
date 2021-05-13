@@ -1,6 +1,8 @@
-import cartItems from '../data/cart-data.js';
+// import cartItems from '../data/cart-data.js';
 import { renderCartItem, getCartTotal } from '../cart/render-cart-items.js';
+import { getCart, CART } from '../local-storage-utils.js';
 
+const cartItems = getCart();
 const anchor = document.querySelector('tbody');
 const total = document.getElementById('total');
 
@@ -15,13 +17,27 @@ for (let item of cartItems) {
 //     const dom = renderCartItem(tableRow);
 // }
 
-const totalPrice = getCartTotal();
+const totalPrice = getCartTotal(cartItems);
 
 total.textContent = totalPrice.toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD'
 });
 
+const tableFoot = document.querySelector('tfoot');
+const placeOrderButton = document.createElement('button');
+
+
+placeOrderButton.textContent = 'Place Order';
+
+placeOrderButton.addEventListener('click', () => {
+    console.log('this button works');
+    alert(`You are about to finalize your purchase. Your total is ${total.textContent} Thank you for shopping at Dubs Exotic Pets!`);
+    localStorage.removeItem(CART);
+    window.location.replace('../index.html');
+});
+
+tableFoot.appendChild(placeOrderButton);
 
 
 
