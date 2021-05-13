@@ -1,5 +1,8 @@
 // export default { renderPets };
 
+// import pets from '../data/pets-data.js';
+import { addItemToCart } from '../local-storage-utils.js';
+
 export default function renderPets(pet) {
     const li = document.createElement('li');
     li.className = pet.category;
@@ -36,15 +39,14 @@ export default function renderPets(pet) {
     
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = pet.code;
-    p.appendChild(button);
-
+    button.value = pet.id;
+    
     button.addEventListener('click', () => {
-        console.log(pet, 'this button works');
-        
-
+        addItemToCart(pet.id);
+        console.log(pet.id, 'this button works');
     });
 
+    p.appendChild(button);
     li.appendChild(p);
 
     return li;

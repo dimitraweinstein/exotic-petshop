@@ -1,8 +1,8 @@
-export default function findById(pets, id){
+export default function findById(array, id){
 
-    for (let pet of pets) {
-        if (id === pet.id) {
-            return pet;
+    for (let partOfArray of array) {
+        if (id === partOfArray.id) {
+            return partOfArray;
         }
 
     }
