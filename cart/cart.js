@@ -1,6 +1,6 @@
 // import cartItems from '../data/cart-data.js';
 import { renderCartItem, getCartTotal } from '../cart/render-cart-items.js';
-import { getCart } from '../local-storage-utils.js';
+import { getCart, CART } from '../local-storage-utils.js';
 
 const cartItems = getCart();
 const anchor = document.querySelector('tbody');
@@ -24,6 +24,19 @@ total.textContent = totalPrice.toLocaleString('en-US', {
     currency: 'USD'
 });
 
+const tableFoot = document.querySelector('tfoot');
+const placeOrderButton = document.createElement('button');
+
+
+placeOrderButton.textContent = 'Place Order';
+
+placeOrderButton.addEventListener('click', () => {
+    console.log('this button works');
+    localStorage.removeItem(CART);
+    window.location.replace('../products/index.html');
+});
+
+tableFoot.appendChild(placeOrderButton);
 
 
 

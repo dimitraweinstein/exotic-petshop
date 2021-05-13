@@ -2,13 +2,15 @@
 import findById from './utils.js';
 // import cartItems from './data/cart-data.js';
 // import pets from './data/pets-data.js';
+export const CART = 'CART';
 
 export function getCart() {
-    const CART = 'CART';
     const cartString = localStorage.getItem(CART);
-    const cartParsed = JSON.parse(cartString);
+    console.log(typeof cartString);
 
-    if (cartParsed) {
+    if (cartString) {
+        console.log('this is a strign');
+        const cartParsed = JSON.parse(cartString);
         return cartParsed;
     }
     else {
